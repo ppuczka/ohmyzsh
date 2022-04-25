@@ -168,7 +168,8 @@ alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 
 alias reload="source ~/.zshrc"
 
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /home/ppuczka/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Be sure to place following plugins in particular directory then uncomment
+#source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+#source /home/ppuczka/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 source $ZSH/oh-my-zsh.sh
