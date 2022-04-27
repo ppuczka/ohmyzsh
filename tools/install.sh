@@ -33,7 +33,7 @@ set -e
 
 # Default settings
 ZSH=${ZSH:-~/.oh-my-zsh}
-REPO=${REPO:-ohmyzsh/ohmyzsh}
+REPO=${REPO:-ppuczka/ohmyzsh}
 REMOTE=${REMOTE:-https://github.com/${REPO}.git}
 BRANCH=${BRANCH:-master}
 
@@ -136,7 +136,7 @@ export ZSH=\"$ZSH\"
 	mv -f ~/.zshrc-omztemp ~/.zshrc
 
 	echo
-}
+
 
 setup_shell() {
 	# Skip setup if the user wants or stdin is closed (not running interactively).

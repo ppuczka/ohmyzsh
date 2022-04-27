@@ -1,7 +1,10 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+export ANGELA="$HOME/angela"
+export PRPU="$HOME/przemek"
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+source "$ZSH/custom/custom.zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -96,7 +99,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
-
+ 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -108,15 +111,8 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 alias repos="cd ~/programming"
 alias ..="cd .."
 alias fswatch="/home/ppuczka/app/fswatch-1.16.0/fswatch/src"
-## Useful aliases
-# Replace ls with exa
-alias lls='exa -al --color=always --group-directories-first --icons' # preferred listing
-alias lla='exa -a --color=always --group-directories-first --icons'  # all files and dirs
-alias lll='exa -l --color=always --group-directories-first --icons'  # long format
-alias llt='exa -aT --color=always --group-directories-first --icons' # tree listing
-alias ll.="exa -a | egrep '^\.'"                                     # show only dotfiles
-alias iip="ip -color"
 
+## Useful aliases
 # Replace some more things with better alternatives
 alias cat='bat --style header --style rules --style snip --style changes --style header'
 [ ! -x /usr/bin/yay ] && [ -x /usr/bin/paru ] && alias yay='paru'
@@ -151,14 +147,11 @@ alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/p
 alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
 alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
 
-# Help people new to Arch
-alias apt='man pacman'
-alias apt-get='man pacman'
+# Help people new to Arch'
 alias please='sudo'
 alias tb='nc termbin.com 9999'
-
-# Cleanup orphaned packages
-alias cleanup='sudo pacman -Rns (pacman -Qtdq)'
+alias ang='cd /home/ppuczka/angela'
+alias prpu='cd /home/ppuczka/przemek'
 
 # Get the error messages from journalctl
 alias jctl="journalctl -p 3 -xb"
@@ -169,7 +162,7 @@ alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 alias reload="source ~/.zshrc"
 
 # Be sure to place following plugins in particular directory then uncomment
-#source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-#source /home/ppuczka/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
+source /home/ppuczka/app/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /home/ppuczka/app/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZSH/oh-my-zsh.sh
+source $ZSH/custom/custom.zsh
