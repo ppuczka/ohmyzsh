@@ -136,7 +136,7 @@ export ZSH=\"$ZSH\"
 	mv -f ~/.zshrc-omztemp ~/.zshrc
 
 	echo
-
+}
 
 setup_shell() {
 	# Skip setup if the user wants or stdin is closed (not running interactively).
